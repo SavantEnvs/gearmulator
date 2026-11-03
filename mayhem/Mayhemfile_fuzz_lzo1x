@@ -1,0 +1,9 @@
+project: savantenvs/gearmulator
+target: fuzz_lzo1x
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_lzo1x/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_lzo1x
+    libfuzzer: true
+    timeout: 10

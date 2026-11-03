@@ -1,0 +1,9 @@
+project: savantenvs/gearmulator
+target: fuzz_vstpreset
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_vstpreset/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_vstpreset
+    libfuzzer: true
+    timeout: 10

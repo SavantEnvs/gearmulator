@@ -1,0 +1,9 @@
+project: savantenvs/gearmulator
+target: fuzz_midistream
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_midistream/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_midistream
+    libfuzzer: true
+    timeout: 10

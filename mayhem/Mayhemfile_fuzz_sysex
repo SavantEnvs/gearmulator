@@ -1,0 +1,9 @@
+project: savantenvs/gearmulator
+target: fuzz_sysex
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sysex/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sysex
+    libfuzzer: true
+    timeout: 10

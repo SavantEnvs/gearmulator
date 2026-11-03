@@ -1,0 +1,9 @@
+project: savantenvs/gearmulator
+target: fuzz_rcp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rcp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rcp
+    libfuzzer: true
+    timeout: 30
